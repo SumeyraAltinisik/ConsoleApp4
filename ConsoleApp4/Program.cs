@@ -2,6 +2,13 @@
 
 namespace ConsoleApp4
 {
+    enum Fields
+    {
+        Ad,
+        Soyad,
+        Yas,
+        Sehir
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -17,6 +24,7 @@ namespace ConsoleApp4
 
             foreach (var rowItem in dataTable.Rows)
             {
+                Console.WriteLine(rowItem[(int)Fields.Sehir].ToString());
                 foreach (var column in rowItem)
                 {
                     Console.WriteLine(column.ToString());
